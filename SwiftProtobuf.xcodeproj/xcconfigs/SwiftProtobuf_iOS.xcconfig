@@ -1,0 +1,14 @@
+// Architectures
+EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_simulator__NATIVE_ARCH_64_BIT_x86_64=arm64 arm64e armv7 armv7s armv6 armv8
+EXCLUDED_ARCHS=$(inherited) $(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_$(EFFECTIVE_PLATFORM_SUFFIX)__NATIVE_ARCH_64_BIT_$(NATIVE_ARCH_64_BIT))
+SDKROOT = iphoneos
+SUPPORTED_PLATFORMS = iphonesimulator iphoneos
+
+// Deployment
+TARGETED_DEVICE_FAMILY = 1,2
+
+// Packaging
+INFOPLIST_FILE = SwiftProtobuf.xcodeproj/Protobuf_Info.plist
+PRODUCT_BUNDLE_IDENTIFIER = org.swift.protobuf.SwiftProtobuf
+PRODUCT_MODULE_NAME = SwiftProtobuf
+PRODUCT_NAME = SwiftProtobuf
